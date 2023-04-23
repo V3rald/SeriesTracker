@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1044236603865",
+    "project_id": "seriestracker-21405",
+    "storage_bucket": "seriestracker-21405.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1044236603865:android:974b4d5aeb4829b2c3c9c8",
+        "android_client_info": {
+          "package_name": "com.example.seriestracker"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1044236603865-uh6j8jufmgutmccl5lr1ohbknskd9nv5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8LTKrk19sgev4dfcttjREYCpTIYhRyqw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1044236603865-uh6j8jufmgutmccl5lr1ohbknskd9nv5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
