@@ -99,26 +99,30 @@ public class AccountActivity extends BaseActivity {
                 Map<String, Integer> genreMapped = new HashMap<>();
                 List<SearchResult> contents = new Gson().fromJson(watchlistJson, searchResultListType);
 
-                for(SearchResult search : contents){
-                    for(String genre : search.getGenres().split(", ")){
-                        if(genreMapped.containsKey(genre)){
-                            genreMapped.put(genre, genreMapped.get(genre) + 1);
-                        }else{
-                            genreMapped.put(genre, 1);
+                if(contents == null || contents.size() == 0){
+                    favouriteGenre.setText(MessageFormat.format("{0}: {1}", getResources().getString(R.string.favourite_genre_hu), ""));
+                }else{
+                    for(SearchResult search : contents){
+                        for(String genre : search.getGenres().split(", ")){
+                            if(genreMapped.containsKey(genre)){
+                                genreMapped.put(genre, genreMapped.get(genre) + 1);
+                            }else{
+                                genreMapped.put(genre, 1);
+                            }
                         }
                     }
-                }
 
-                int max = 0;
-                String genre = "";
-                for(Map.Entry<String, Integer> entry : genreMapped.entrySet()){
-                    if(entry.getValue() > max){
-                        max = entry.getValue();
-                        genre = entry.getKey();
+                    int max = 0;
+                    String genre = "";
+                    for(Map.Entry<String, Integer> entry : genreMapped.entrySet()){
+                        if(entry.getValue() > max){
+                            max = entry.getValue();
+                            genre = entry.getKey();
+                        }
                     }
-                }
 
-                favouriteGenre.setText(MessageFormat.format("{0}: {1}", getResources().getString(R.string.favourite_genre_hu), genre));
+                    favouriteGenre.setText(MessageFormat.format("{0}: {1}", getResources().getString(R.string.favourite_genre_hu), genre));
+                }
             });
         }else{
             setTitle(getResources().getString(R.string.app_name) + " - " + getResources().getString(R.string.account_text));
@@ -149,26 +153,30 @@ public class AccountActivity extends BaseActivity {
                 Map<String, Integer> genreMapped = new HashMap<>();
                 List<SearchResult> contents = new Gson().fromJson(watchlistJson, searchResultListType);
 
-                for(SearchResult search : contents){
-                    for(String genre : search.getGenres().split(", ")){
-                        if(genreMapped.containsKey(genre)){
-                            genreMapped.put(genre, genreMapped.get(genre) + 1);
-                        }else{
-                            genreMapped.put(genre, 1);
+                if(contents == null || contents.size() == 0) {
+                    favouriteGenre.setText(MessageFormat.format("{0}: {1}", getResources().getString(R.string.favourite_genre), ""));
+                }else{
+                    for(SearchResult search : contents){
+                        for(String genre : search.getGenres().split(", ")){
+                            if(genreMapped.containsKey(genre)){
+                                genreMapped.put(genre, genreMapped.get(genre) + 1);
+                            }else{
+                                genreMapped.put(genre, 1);
+                            }
                         }
                     }
-                }
 
-                int max = 0;
-                String genre = "";
-                for(Map.Entry<String, Integer> entry : genreMapped.entrySet()){
-                    if(entry.getValue() > max){
-                        max = entry.getValue();
-                        genre = entry.getKey();
+                    int max = 0;
+                    String genre = "";
+                    for(Map.Entry<String, Integer> entry : genreMapped.entrySet()){
+                        if(entry.getValue() > max){
+                            max = entry.getValue();
+                            genre = entry.getKey();
+                        }
                     }
-                }
 
-                favouriteGenre.setText(MessageFormat.format("{0}: {1}", getResources().getString(R.string.favourite_genre), genre));
+                    favouriteGenre.setText(MessageFormat.format("{0}: {1}", getResources().getString(R.string.favourite_genre), genre));
+                }
             });
         }
     }
