@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".YouActivity">
+    tools:context=".AccountActivity">
 
     <LinearLayout
         android:id="@+id/linearLayout3"
@@ -38,6 +38,17 @@
             tools:ignore="OnClick" />
 
         <Button
+            android:id="@+id/friends_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="FriendsButtonClick"
+            android:text="@string/friends_button"
+            android:textAllCaps="false"
+            app:cornerRadius="0dp"
+            tools:ignore="OnClick" />
+
+        <Button
             android:id="@+id/you_button"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -59,6 +70,17 @@
         app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <Button
+        android:id="@+id/settingsButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:onClick="SettingsButtonClick"
+        android:text="Settings"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintEnd_toStartOf="@+id/logoutButton" />
+
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="0dp"
@@ -75,6 +97,18 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Date joined" />
+
+            <TextView
+                android:id="@+id/friendNumber"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Friend Number" />
+
+            <TextView
+                android:id="@+id/favouriteGenre"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Favourite genre" />
         </LinearLayout>
     </ScrollView>
 

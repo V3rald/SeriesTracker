@@ -11,11 +11,17 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SeriesTracker">
-        <activity android:name=".RegisterActivity"></activity>
+        <activity android:name=".EditMediaActivity"></activity>
+        <activity android:name=".MessageActivity" />
+        <activity android:name=".SettingsActivity" />
+        <activity android:name=".FriendsActivity" />
+        <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />
-        <activity android:name=".YouActivity" />
+        <activity android:name=".AccountActivity" />
         <activity android:name=".SearchActivity" />
-        <activity android:name=".HomeActivity" android:exported="true">
+        <activity
+            android:name=".HomeActivity"
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

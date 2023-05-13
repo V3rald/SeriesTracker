@@ -2,12 +2,11 @@ package com.example.seriestracker;
 
 import android.content.Intent;
 import android.view.View;
-import android.view.WindowManager;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.app.AppCompatDelegate;
 
-public class BaseActivity extends AppCompatActivity {
+public abstract class BaseActivity extends AppCompatActivity {
     public BaseActivity(){
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_FOLLOW_SYSTEM);
     }
@@ -23,7 +22,14 @@ public class BaseActivity extends AppCompatActivity {
     }
 
     public void YouButtonClick(View view) {
-        Intent youActivity = new Intent(this, YouActivity.class);
+        Intent youActivity = new Intent(this, AccountActivity.class);
         startActivity(youActivity);
     }
+
+    public void FriendsButtonClick(View view) {
+        Intent friendsActivity = new Intent(this, FriendsActivity.class);
+        startActivity(friendsActivity);
+    }
+
+    public abstract void changeLanguage();
 }

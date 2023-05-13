@@ -4,27 +4,16 @@ import java.util.List;
 
 public class SearchData
 {
-    private String searchType;
-    private String expression;
-
+    private String QueryString;
     private List<SearchResult> results;
-
     private String errorMessage;
 
-    public String getSearchType() {
-        return searchType;
+    public String getQueryString() {
+        return QueryString;
     }
 
-    public void setSearchType(String searchType) {
-        this.searchType = searchType;
-    }
-
-    public String getExpression() {
-        return expression;
-    }
-
-    public void setExpression(String expression) {
-        this.expression = expression;
+    public void setQueryString(String queryString) {
+        QueryString = queryString;
     }
 
     public List<SearchResult> getResults() {

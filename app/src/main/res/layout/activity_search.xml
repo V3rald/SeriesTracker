@@ -38,6 +38,17 @@
             tools:ignore="OnClick" />
 
         <Button
+            android:id="@+id/friends_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="FriendsButtonClick"
+            android:text="@string/friends_button"
+            android:textAllCaps="false"
+            app:cornerRadius="0dp"
+            tools:ignore="OnClick" />
+
+        <Button
             android:id="@+id/you_button"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -60,8 +71,7 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="8"
+            android:layout_height="wrap_content"
             android:orientation="horizontal">
 
             <EditText
@@ -80,12 +90,43 @@
                 android:layout_weight="1"
                 android:onClick="SearchContentClick"
                 android:text="Search" />
+
         </LinearLayout>
+
+        <CheckBox
+            android:id="@+id/advancedSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Advanced Search" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/advancedSearchField"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <EditText
+                android:id="@+id/genreText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Genre"
+                android:inputType="textPersonName"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <Spinner
+                android:id="@+id/typeSpinner"
+                android:layout_width="409dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/genreText" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1">
+            android:layout_height="wrap_content">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/recyclerView"

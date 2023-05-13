@@ -1,6 +1,8 @@
 package com.example.seriestracker.adapters;
 
 import android.content.Context;
+import android.content.SharedPreferences;
+import android.preference.PreferenceManager;
 import android.text.TextUtils;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -8,7 +10,6 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -51,6 +52,17 @@ public class SearchRecyclerAdapter extends RecyclerView.Adapter<SearchRecyclerAd
         Glide.with(context).load(item.getImage()).apply(new RequestOptions().override(300, 400)).into(holder.image);
 
         Button watchlistButton = holder.watchlistButton.findViewById(R.id.WatchlistAddButton);
+
+        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(context);
+        String language = sharedPref.getString("language", "Magyar");
+
+        if(language.equals("Magyar")){
+            watchlistButton.setText(context.getResources().getString(R.string.watchlist_button_hu));
+        }else{
+            watchlistButton.setText(context.getResources().getString(R.string.watchlist_button));
+        }
+
+
         watchlistButton.setOnClickListener(v -> {
             new FB().addContent(context, User.userLoggedIn(context), item);
         });
@@ -70,8 +82,8 @@ public class SearchRecyclerAdapter extends RecyclerView.Adapter<SearchRecyclerAd
         public SearchViewHolder(@NonNull @NotNull View itemView) {
             super(itemView);
 
-            title = itemView.findViewById(R.id.TitleCardText);
-            description = itemView.findViewById(R.id.descriptionCardText);
+            title = itemView.findViewById(R.id.senderName);
+            description = itemView.findViewById(R.id.FriendDescriptionCardText);
             image = itemView.findViewById(R.id.imageCard);
             watchlistButton = itemView.findViewById(R.id.WatchlistAddButton);
 

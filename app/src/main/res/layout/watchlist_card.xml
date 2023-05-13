@@ -3,7 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp">
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
@@ -16,52 +17,91 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/TitleCardText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:layout_marginStart="4dp"
-                android:layout_marginTop="16dp"
-                android:breakStrategy="high_quality"
-                android:inputType="textMultiLine"
-                android:lines="1"
-                android:singleLine="false"
-                android:text="Title"
-                android:textStyle="bold"
-                app:layout_constraintStart_toEndOf="@+id/imageCard"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <ImageView
-                android:id="@+id/imageCard"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="parent"
+            <LinearLayout
+                android:id="@+id/linearLayout7"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/ic_launcher_foreground" />
+                app:layout_constraintTop_toTopOf="parent">
 
-            <TextView
-                android:id="@+id/descriptionCardText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:inputType="textMultiLine"
-                android:lines="1"
-                android:singleLine="false"
-                android:text="Description"
-                app:layout_constraintStart_toEndOf="@+id/imageCard"
-                app:layout_constraintTop_toBottomOf="@+id/TitleCardText" />
+                <ImageView
+                    android:id="@+id/imageCard"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_launcher_foreground" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="50dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/senderName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_margin="5dp"
+                            android:breakStrategy="high_quality"
+                            android:inputType="textMultiLine"
+                            android:singleLine="false"
+                            android:text="Title"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/FriendDescriptionCardText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="5dp"
+                            android:layout_marginStart="4dp"
+                            android:autoSizeTextType="uniform"
+                            android:inputType="textMultiLine"
+                            android:singleLine="false"
+                            android:text="Description"
+                            android:textSize="10sp" />
+
+                        <TextView
+                            android:id="@+id/statusText"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="5dp"
+                            android:breakStrategy="high_quality"
+                            android:inputType="textMultiLine"
+                            android:singleLine="false"
+                            android:text="Status"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/ratingText"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="5dp"
+                            android:breakStrategy="high_quality"
+                            android:inputType="textMultiLine"
+                            android:singleLine="false"
+                            android:text="Rating"
+                            android:textSize="10sp"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
 
             <Button
-                android:id="@+id/removeWatchlistButton"
+                android:id="@+id/deleteMessageButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Remove"
                 android:textAllCaps="false"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/descriptionCardText" />
+                app:layout_constraintEnd_toEndOf="parent" />
 
             <Button
                 android:id="@+id/editWatchlistButton"
@@ -71,8 +111,7 @@
                 android:text="Edit"
                 android:textAllCaps="false"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/removeWatchlistButton"
-                app:layout_constraintTop_toBottomOf="@+id/descriptionCardText" />
+                app:layout_constraintEnd_toStartOf="@+id/deleteMessageButton" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>

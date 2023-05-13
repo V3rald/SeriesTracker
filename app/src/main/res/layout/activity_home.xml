@@ -38,6 +38,17 @@
             tools:ignore="OnClick" />
 
         <Button
+            android:id="@+id/friends_button"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="FriendsButtonClick"
+            android:text="@string/friends_button"
+            android:textAllCaps="false"
+            app:cornerRadius="0dp"
+            tools:ignore="OnClick" />
+
+        <Button
             android:id="@+id/you_button"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
@@ -52,8 +63,6 @@
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
         app:layout_constraintBottom_toTopOf="@+id/linearLayout"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -65,7 +74,7 @@
             android:orientation="vertical">
 
             <TextView
-                android:id="@+id/textView"
+                android:id="@+id/watchlistText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Watchlist"

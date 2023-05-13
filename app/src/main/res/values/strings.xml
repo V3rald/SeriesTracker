@@ -1,8 +1,53 @@
 <resources>
+    <string name="settings_title">Settings</string>
+    <string name="language_text">Language</string>
+
+    <string name="search_content_hint">Name</string>
+    <string name="watchlist_button">Add</string>
+
+
+    <string name="pending_text">Pending</string>
+    <string name="suggestions_text">Friend suggestions</string>
+    <string name="message_text">Message</string>
+    <string name="request_text">Request friend</string>
+    <string name="number_of_text">Number of media matched</string>
+    <string name="accept_text">Accept friend</string>
+
+    <string name="watchlist_text">Watchlist</string>
+    <string name="edit_button">Edit</string>
+    <string name="remove_button">Remove</string>
+
+    <string name="send_button">Send</string>
+    <string name="number_of_friends">Number of friends</string>
+    <string name="favourite_genre">Favourite genre</string>
+
+    <string name="advanced_search">Advanced search</string>
+    <string name="genre_hint">Genre</string>
+
+    <string name="ptw">Plan to watch</string>
+    <string name="c">Completed</string>
+    <string name="w">Watching</string>
+
+    <string name="edit_media">Edit media</string>
+
+
+    <string name="logout_text">Logout</string>
+    <string name="date_joined">Date joined</string>
+    <string name="login_title">Login</string>
+    <string name="register_title">Register</string>
+    <string name="email_text">E-mail</string>
+    <string name="password_text">Password</string>
+
+    <string name="home_text">Home</string>
+    <string name="search_text">Search</string>
+    <string name="friends_text">Friends</string>
+    <string name="account_text">Account</string>
+
     <string name="app_name">SeriesTracker</string>
     <string name="home_button">Home</string>
     <string name="search_button">Search</string>
-    <string name="you_button">You</string>
+    <string name="friends_button">Friends</string>
+    <string name="you_button">Account</string>
     <string name="title_activity_search">SearchActivity</string>
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>

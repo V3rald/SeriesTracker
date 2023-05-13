@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="settings_title_hu">Beállítások</string>
+    <string name="language_text_hu">Nyelv</string>
+
+    <string name="search_content_hint_hu">Név</string>
+    <string name="watchlist_button_hu">Hozzáadás</string>
+
+    <string name="logout_text_hu">Kijelentkezés</string>
+    <string name="date_joined_hu">Csatlakozott</string>
+    <string name="login_title_hu">Bejelentkezés</string>
+    <string name="register_title_hu">Regisztráció</string>
+    <string name="password_text_hu">Jelszó</string>
+
+    <string name="pending_text_hu">Barátkérelmek</string>
+    <string name="suggestions_text_hu">Barát ajánlások</string>
+    <string name="message_text_hu">Csevegés</string>
+    <string name="request_text_hu">Barátkérelem</string>
+    <string name="number_of_text_hu">Közös médiatartalmak száma</string>
+    <string name="accept_text_hu">Barát elfogadása</string>
+
+    <string name="watchlist_text_hu">Lista</string>
+    <string name="edit_button_hu">Szerkesztés</string>
+    <string name="remove_button_hu">Törlés</string>
+    <string name="send_button_hu">Küldés</string>
+
+    <string name="number_of_friends_hu">Barátok száma</string>
+    <string name="favourite_genre_hu">Kedvenc műfaj</string>
+    <string name="advanced_search_hu">Bővebb keresés</string>
+    <string name="genre_hint_hu">Műfaj</string>
+
+    <string name="ptw_hu">Tervezve</string>
+    <string name="c_hu">Befejezett</string>
+    <string name="w_hu">Befejezetlen</string>
+
+    <string name="edit_media_hu">Tartalom szerkesztés</string>
+
+
+    <string name="home_text_hu">Főoldal</string>
+    <string name="search_text_hu">Keres</string>
+    <string name="friends_text_hu">Barátok</string>
+    <string name="account_text_hu">Fiók</string>
+</resources>
